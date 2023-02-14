@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% block title%} 
+student Add
+ {% endblock title%} 
+ 
+{% block body %}
+<h1>Student-Add</h1>
+
+ <!-- formda veri gönderirken enctype="multipart/form-data" kullanıyoruz -->
+<form action="" method="POST" enctype="multipart/form-data">
+    <!-- formda güvenlik için csrf_token kullanıyoruz -->
+  {% csrf_token%} 
+  {{form.as_p}}
+  <button type="submit">Ekle</button>
+</form>
+
+{% endblock body %}

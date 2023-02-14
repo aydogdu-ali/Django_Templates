@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% block title%} 
+student Add
+{% endblock title%}
+{% block body%}
+<h1>Student- Update</h1>
+
+
+<!-- ekleme kısmı -->
+<form action="" method="POST" enctype="multipart/form-data">
+    <!-- form yapısı kullanıldığında güvenlik için kullanıyoruz(csrf_token) -->
+  {% csrf_token%} 
+  {{form.as_p}}
+  <button type="submit">Ekle</button>
+</form>
+
+{% endblock body %}

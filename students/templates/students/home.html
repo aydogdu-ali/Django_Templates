@@ -1,0 +1,13 @@
+<!-- inherit ettik base.html den -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'students/main.css' %}">
+{% endblock link %}
+
+
+{% block body %}
+<h1>Hello this is home page...</h1>
+
+{% endblock body %}
